@@ -40,7 +40,7 @@ def fix_reading_text(text):
 @app.route("/")
 def index():
     if 'messages' not in session:
-        session['messages'] = [{"role": "system", "content": "あなたは可愛い女子高校生型のアシスタントAIです。"}]
+        session['messages'] = [{"role": "system", "content": "あなたはアシスタント型AIです。"}]
     return render_template("index.html")
 
 async def transcribe_audio(audio_file):
