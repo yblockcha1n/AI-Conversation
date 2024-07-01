@@ -128,7 +128,7 @@ def delete_audio():
 
 @app.route("/reset_conversation", methods=["POST"])
 def reset_conversation():
-    session['messages'] = [{"role": "system", "content": "あなたは可愛い女子高校生型のアシスタントAIです。"}]
+    session['messages'] = [{"role": "system", "content": "あなたはアシスタント型AIです。"}]
     return jsonify({"status": "success"})
 
 if __name__ == "__main__":
