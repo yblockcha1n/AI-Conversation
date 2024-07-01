@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.reset-button:hover {
+    background-color: #c0392b;
+}
+
+.reset-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.record-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #3498db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.record-button:hover {
+    background-color: #2980b9;
+}
+
+.record-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.record-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.recording .record-icon {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.transcript-container, .response-container {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+#transcript, #response {
+    min-height: 100px;
+    white-space: pre-wrap;
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #7f8c8d;
+}
