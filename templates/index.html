@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI会話</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI会話 - テストv1</h1>
+            <button id="resetButton" class="reset-button">会話をリセット</button>
+        </header>
+        <div class="main-content">
+            <div class="button-container">
+                <button id="recordButton" class="record-button">
+                    <div class="record-icon"></div>
+                </button>
+            </div>
+            <div class="transcript-container">
+                <h2>あなたの発言:</h2>
+                <div id="transcript"></div>
+            </div>
+            <div class="response-container">
+                <h2>AIの応答:</h2>
+                <div id="response"></div>
+            </div>
+        </div>
+        <div id="status"></div>
+        <audio id="audioPlayer" style="display: none;"></audio>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
